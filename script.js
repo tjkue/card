@@ -1,16 +1,6 @@
-// Get the parameters from the URL
+// Get the name from the URL parameters
 const urlParams = new URLSearchParams(window.location.search);
+const name = urlParams.get('name');
 
-// Get individual parameters or use default values
-const name = urlParams.get('name') || 'Your Name';
-const email = urlParams.get('email') || 'your.email@example.com';
-const whatsapp = urlParams.get('whatsapp') || '+123456789';
-const phone = urlParams.get('phone') || '+987654321';
-const location = urlParams.get('location') || 'Your City, Country';
-
-// Update the business card details
-document.getElementById('name').innerText = name;
-document.getElementById('email').innerText = `Email: ${email}`;
-document.getElementById('whatsapp').innerText = `WhatsApp: ${whatsapp}`;
-document.getElementById('phone').innerText = `Phone: ${phone}`;
-document.getElementById('location').innerText = `Location: ${location}`;
+// Update the name on the business card
+document.getElementById('name').innerText = name || 'Your Name';

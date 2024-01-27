@@ -11,7 +11,7 @@ const [street, town, country] = locationValue.split(',');
 // Update the business card details
 document.getElementById('name').innerText = nameValue;
 document.getElementById('email').innerHTML = `E-Mail: <a href="mailto:${emailValue}">${emailValue}</a>`;
-document.getElementById('phone').innerHTML = `Telefon: <a href="tel:${phoneValue}">${phoneValue}</a>`;
+document.getElementById('phone').innerHTML = `Telefon: <a href="tel:${phoneValue.replace(/\s/g, '')}">${phoneValue}</a>`;
 //document.getElementById('email').innerText = `E-Mail: ${emailValue}`;
 //document.getElementById('phone').innerText = `Telefon: ${phoneValue}`;
 document.getElementById('street').innerText = street.trim();

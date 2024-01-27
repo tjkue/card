@@ -5,8 +5,6 @@ const email = urlParams.get('email') || 'your.email@example.com';
 const phone = urlParams.get('phone') || '+987654321';
 const location = urlParams.get('location') || 'Your City, Country';
 
-const location = urlParams.get('testlocation') || 'Your City, Country';
-
 // Update the business card details
 document.getElementById('name').innerText = name;
 document.getElementById('email').innerText = `Email: ${email}`;

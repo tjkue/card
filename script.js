@@ -1,3 +1,5 @@
+var cardFlipped = false;
+
 // Get the parameters from the URL
 const urlParams = new URLSearchParams(window.location.search);
 const nameValue = urlParams.get('name') || 'name';
@@ -16,3 +18,18 @@ document.getElementById('phone').innerHTML = `Tel: <a href="tel:${phoneValue.rep
 document.getElementById('street').innerText = street.trim();
 document.getElementById('town').innerText = town.trim();
 document.getElementById('country').innerText = country.trim();
+
+function toggleCard() {
+    var businessCard = document.querySelector('.business-card');
+
+    if (cardFlipped) {
+        // If card is flipped, flip it back
+        businessCard.classList.remove('touched');
+    } else {
+        // If card is not flipped, flip it
+        businessCard.classList.add('touched');
+    }
+
+    // Toggle the card's flipped state
+    cardFlipped = !cardFlipped;
+}

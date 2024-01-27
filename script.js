@@ -25,11 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function addKlickText() {
         setTimeout(function () {
             var frontCard = document.querySelector(".front");
-            var pressenText = document.createElement("p");
-            pressenText.textContent = ">Klick<";
-            pressenText.style.fontSize = "12px";
-            pressenIcon.style.color = "grey";
-            frontCard.appendChild(pressenText);
+            var klickText = document.createElement("p");
+            klickText.textContent = ">Klick<";
+            klickText.style.fontSize = "24px";
+            frontCard.appendChild(klickText);
         }, 2500);
     }
 

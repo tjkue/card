@@ -30,26 +30,65 @@
             backface-visibility: hidden;
         }
         
-        .business-card:hover {
-            transform: rotateY(180deg);
+        .business-card.show-back {
+            transform: rotateX(180deg);
         }
         
-        .front,
-        .back {
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            border-radius: 15px;
+        .front {
+            transform: translate(-50%, -50%);
             position: absolute;
+            width: 90%;
+            height: 90%;
+            top: 50%;
+            left: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            text-align: center;
+            border-radius: 25px;
+        }
+
+        .back {
+            transform: rotateX(180deg) translate(-50%, -50%);
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            top: -50%;
+            left: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            text-align: center;
+            border-radius: 25px;
+        }
+
+
+        .front::before {
+            content: "";
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            transform: translate(-50%, -50%);
             width: 100%;
             height: 100%;
-            left: 50%;
-            transform: translateX(-50%);
+            border-radius: 25px;
+            background: radial-gradient(circle, rgba(169, 169, 169, 0.5) 0%, rgba(169, 169, 169, 0.1) 100%);
+            animation: pulse 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
         
         .back {
-            transform: rotateY(180deg);
+            transform: rotateX(180deg) translate(-50%, -50%);
         }
         
         .business-card h1 {
@@ -72,15 +111,11 @@
         .contact-container p.address {
             font-weight: bold;
         }
-        
-        .business-card.touched {
-            transform: rotateY(180deg);
-        }
     </style>
 </head>
 <body>
 
-    <div class="business-card" ontouchstart="toggleCard()">
+    <div class="business-card" onclick="toggleCard()">
         <div class="card-inner front">
             <h1 id="front-name">name</h1>
         </div>
@@ -100,6 +135,5 @@
     </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>

@@ -20,3 +20,24 @@ document.getElementById('country').innerText = country.trim();
 function toggleCard() {
     document.querySelector('.business-card').classList.toggle('show-back');
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Wait for the DOM to be fully loaded
+
+    // Function to add "Pressen" text to the front card after 5 seconds
+    function addPressenText() {
+        setTimeout(function () {
+            var frontCard = document.querySelector(".front");
+            var pressenText = document.createElement("p");
+            pressenText.textContent = "Pressen";
+            pressenText.style.fontSize = "24px";
+            frontCard.appendChild(pressenText);
+        }, 5000);
+    }
+
+    // Add click event listener to the card
+    document.querySelector(".business-card").addEventListener("click", toggleCard);
+
+    // Call the function to add "Pressen" text after 5 seconds
+    addPressenText();
+});

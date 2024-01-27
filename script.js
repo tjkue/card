@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var frontCard = document.querySelector(".front");
             var klickText = document.createElement("p");
             klickText.textContent = ">Klick<";
-            klickText.style.fontSize = "24px";
+            klickText.style.fontSize = "12px";
             frontCard.appendChild(klickText);
         }, 2500);
     }

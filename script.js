@@ -5,8 +5,13 @@ const emailValue = urlParams.get('email') || 'default email';
 const phoneValue = urlParams.get('phone') || 'default phone';
 const locationValue = urlParams.get('location') || 'default location';
 
+// Split the 'location' parameter into 'street', 'town', and 'country'
+const [street, town, country] = locationValue.split(',');
+
 // Update the business card details
 document.getElementById('name').innerText = nameValue;
 document.getElementById('email').innerText = `Email: ${emailValue}`;
 document.getElementById('phone').innerText = `Phone: ${phoneValue}`;
-document.getElementById('location').innerText = `Location: ${locationValue}`;
+document.getElementById('street').innerText = `Street: ${street.trim()}`;
+document.getElementById('town').innerText = `Town: ${town.trim()}`;
+document.getElementById('country').innerText = `Country: ${country.trim()}`;

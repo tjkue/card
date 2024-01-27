@@ -1,9 +1,9 @@
 // Get the parameters from the URL
 const urlParams = new URLSearchParams(window.location.search);
-const nameValue = urlParams.get('name') || 'default name';
-const emailValue = urlParams.get('email') || 'default email';
-const phoneValue = urlParams.get('phone') || 'default phone';
-const locationValue = urlParams.get('location') || 'default location';
+const nameValue = urlParams.get('name') || 'name';
+const emailValue = urlParams.get('email') || 'email';
+const phoneValue = urlParams.get('phone') || 'phone';
+const locationValue = urlParams.get('location') || 'location';
 
 // Split the 'location' parameter into 'street', 'town', and 'country'
 const [street, town, country] = locationValue.split(',');

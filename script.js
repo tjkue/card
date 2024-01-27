@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
             var frontCard = document.querySelector(".front");
             var pressenText = document.createElement("p");
-            pressenText.textContent = "Pressen";
-            pressenText.style.fontSize = "24px";
+            pressenText.textContent = ">Klick<";
+            pressenText.style.fontSize = "12px";
             frontCard.appendChild(pressenText);
         }, 5000);
     }

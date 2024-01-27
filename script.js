@@ -33,7 +33,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 2500);
     }
 
-    document.querySelector(".business-card").addEventListener("click", toggleCard);
-
     addKlickText();
 });

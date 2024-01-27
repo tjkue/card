@@ -14,7 +14,7 @@
             justify-content: center;
             height: 100vh;
         }
-
+        
         .business-card {
             position: relative;
             width: 450px;
@@ -22,19 +22,20 @@
             transform-style: preserve-3d;
             transition: transform 0.5s;
         }
-
+        
         .card-inner {
             position: absolute;
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
         }
-
+        
         .business-card:hover {
             transform: rotateY(180deg);
         }
-
-        .front, .back {
+        
+        .front,
+        .back {
             background-color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -44,16 +45,16 @@
             width: 100%;
             height: 100%;
         }
-
+        
         .back {
             transform: rotateY(180deg);
         }
-
+        
         .business-card h1 {
             margin-bottom: 5px;
             color: #333333;
         }
-
+        
         .contact-container {
             margin-top: 10px;
             background-color: black;
@@ -61,15 +62,15 @@
             border-radius: 8px;
             color: white;
         }
-
+        
         .contact-container p {
             margin: 5px 0;
         }
-
+        
         .contact-container p.address {
             font-weight: bold;
         }
-
+        
         .business-card.touched {
             transform: rotateY(180deg);
         }
